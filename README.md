@@ -1,6 +1,8 @@
 # Terraform Forge
 
 [![Claude Skill](https://img.shields.io/badge/Claude-Skill-6272F5)](https://docs.claude.ai/docs/agent-skills)
+[![Terraform](https://img.shields.io/badge/Terraform-1.1+-623CE4)](https://www.terraform.io/)
+[![OpenTofu](https://img.shields.io/badge/OpenTofu-1.6+-FFD814)](https://opentofu.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A Terraform/OpenTofu skill for Claude Code. Diagnoses security failure modes before writing code: secret exposure, blast radius, compliance gaps, CI drift. Loads only what's needed, ships an output contract with every response.
@@ -13,12 +15,19 @@ A Terraform/OpenTofu skill for Claude Code. Diagnoses security failure modes bef
 
 ## ⚡ Quick Start
 
-**macOS / Linux**
+**One-line install (recommended)**
+```bash
+npx skills add anirudhx7/terraform-forge
+```
+
+**Manual install**
+
+macOS / Linux:
 ```bash
 git clone https://github.com/anirudhx7/terraform-forge.git ~/.claude/skills/terraform-forge
 ```
 
-**Windows (PowerShell)**
+Windows (PowerShell):
 ```powershell
 git clone https://github.com/anirudhx7/terraform-forge.git "$env:USERPROFILE\.claude\skills\terraform-forge"
 ```
@@ -32,10 +41,13 @@ Claude Code auto-discovers skills - no restart needed.
 
 **Or just ask naturally** - Forge activates automatically for any Terraform/OpenTofu task:
 ```
-Review my main.tf for security issues
+Review my main.tf for secret exposure risks
 ```
 ```
-Migrate this module from count to for_each
+Create a GitHub Actions pipeline with plan/apply separation and policy checks
+```
+```
+Migrate this count-based module to for_each safely
 ```
 
 ---
