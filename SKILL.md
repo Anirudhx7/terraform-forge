@@ -1,12 +1,8 @@
 ---
 name: terraform-forge
-description: "Comprehensive Terraform/OpenTofu skill merging TerraShark failure-mode diagnostics with terraform-skill production patterns. Use when generating, reviewing, refactoring, migrating, testing, or securing IaC."
+description: "Terraform/OpenTofu skill for Claude Code. Diagnoses security failure modes before writing code: secret exposure, blast radius, compliance gaps, CI drift. Use when generating, reviewing, refactoring, migrating, testing, or securing IaC."
 version: 1.0.0
 license: MIT
-metadata:
-  sources:
-    - TerraShark by Lukas Niessen (MIT)
-    - terraform-skill by Anton Babenko (Apache 2.0)
 ---
 
 # Terraform Forge: Failure-Mode Workflow for Terraform/OpenTofu
