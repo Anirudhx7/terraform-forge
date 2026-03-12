@@ -3,7 +3,7 @@
 [![Claude Skill](https://img.shields.io/badge/Claude-Skill-6272F5)](https://docs.claude.ai/docs/agent-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A Terraform/OpenTofu skill for Claude Code. Diagnoses failure modes before writing code, loads only what's needed, and ships an output contract with every response.
+A Terraform/OpenTofu skill for Claude Code. Diagnoses security failure modes before writing code: secret exposure, blast radius, compliance gaps, CI drift. Loads only what's needed, ships an output contract with every response.
 
 ---
 
