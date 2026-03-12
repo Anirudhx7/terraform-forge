@@ -1,10 +1,17 @@
 # Terraform Forge
 
-A Terraform/OpenTofu skill for Claude Code built on a failure-mode diagnostic workflow with production-grade HCL patterns. Lean activation, deep references, security-first defaults.
+[![Claude Skill](https://img.shields.io/badge/Claude-Skill-6272F5)](https://docs.claude.ai/docs/agent-skills)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A Terraform/OpenTofu skill for Claude Code. Diagnoses failure modes before writing code, loads only what's needed, and ships an output contract with every response.
 
 ---
 
-## Quick Start
+[Quick Start](#-quick-start) • [How It Works](#-how-it-works) • [What's Included](#-whats-included) • [Repository Layout](#-repository-layout) • [Credits](#credits)
+
+---
+
+## ⚡ Quick Start
 
 **macOS / Linux**
 ```bash
@@ -16,30 +23,44 @@ git clone https://github.com/anirudhx7/terraform-forge.git ~/.claude/skills/terr
 git clone https://github.com/anirudhx7/terraform-forge.git "$env:USERPROFILE\.claude\skills\terraform-forge"
 ```
 
-Claude Code auto-discovers skills — no restart needed.
+Claude Code auto-discovers skills - no restart needed.
+
+**Invoke explicitly:**
+```
+/terraform-forge Create a multi-region S3 module with replication
+```
+
+**Or just ask naturally** - Forge activates automatically for any Terraform/OpenTofu task:
+```
+Review my main.tf for security issues
+```
+```
+Migrate this module from count to for_each
+```
+
 ---
 
-## How It Works
+## 🔎 How It Works
 
 Every Terraform task runs through a **7-step failure-mode workflow**:
 
-1. **Capture context** — runtime, providers, backend, environment criticality
-2. **Diagnose failure modes** — identity churn, secret exposure, blast radius, CI drift, compliance gaps
-3. **Load relevant references** — only the files needed for this specific task
-4. **Propose with risk controls** — what could go wrong, guardrails, rollback path
-5. **Generate artifacts** — HCL, migration blocks, CI configs, policy rules
-6. **Validate** — command sequence tailored to runtime and risk tier
-7. **Output contract** — assumptions, tradeoffs, validation plan, recovery notes
+1. **Capture context** - runtime, providers, backend, environment criticality
+2. **Diagnose failure modes** - identity churn, secret exposure, blast radius, CI drift, compliance gaps
+3. **Load relevant references** - only the files needed for this specific task
+4. **Propose with risk controls** - what could go wrong, guardrails, rollback path
+5. **Generate artifacts** - HCL, migration blocks, CI configs, policy rules
+6. **Validate** - command sequence tailored to runtime and risk tier
+7. **Output contract** - assumptions, tradeoffs, validation plan, recovery notes
 
 ---
 
-## What's Included
+## 🐣 What's Included
 
 **Diagnostic workflow**
 - 7-step failure-mode sequence before any code is generated
 - Output contract with assumptions, tradeoffs, and rollback notes
 - LLM mistake checklists in every reference file
-- Granular reference loading — only relevant files loaded per task
+- Granular reference loading - only relevant files loaded per task
 
 **AWS and HCL patterns**
 - Secrets Manager, KMS, S3, IAM, VPC patterns
@@ -65,12 +86,12 @@ Every Terraform task runs through a **7-step failure-mode workflow**:
 
 **Migration**
 - `moved`, `import`, refactor, and upgrade playbooks
-- 0.12/0.13 → 1.x migration checklist
+- 0.12/0.13 to 1.x migration checklist
 - Refactoring decision tree
 
 ---
 
-## Repository Layout
+## 🔲 Repository Layout
 
 | File | Description |
 |------|-------------|
@@ -89,7 +110,7 @@ Every Terraform task runs through a **7-step failure-mode workflow**:
 | `references/ci-delivery-patterns.md` | GitHub Actions, GitLab CI, Atlantis, Infracost, cleanup |
 | `references/testing-matrix.md` | Native tests, set-type blocks, Terratest, mocking, cost |
 | `references/security-and-governance.md` | Trivy, Checkov, OPA, encryption, IAM, state hardening |
-| `references/migration-playbooks.md` | moved, import, refactor, upgrade, 0.12→1.x checklist |
+| `references/migration-playbooks.md` | moved, import, refactor, upgrade, 0.12 to 1.x checklist |
 | `references/quick-ops.md` | Commands, troubleshooting, TF vs OpenTofu |
 | **Pattern banks** | |
 | `references/examples-good.md` | Strong implementation patterns |
@@ -107,6 +128,6 @@ Every Terraform task runs through a **7-step failure-mode workflow**:
 - **[TerraShark](https://github.com/LukasNiessen/terrashark)** by Lukas Niessen (MIT)
 - **[terraform-skill](https://github.com/antonbabenko/terraform-skill)** by Anton Babenko (Apache 2.0)
 
-## License
+## 📄 License
 
-MIT — See [LICENSE](LICENSE) for details.
+MIT - See [LICENSE](LICENSE) for details.
