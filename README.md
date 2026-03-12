@@ -5,16 +5,18 @@ A Terraform/OpenTofu skill for Claude Code built on a failure-mode diagnostic wo
 ---
 
 ## Quick Start
-```bash
-# macOS / Linux
-git clone https://github.com/anirudhx7/terraform-forge.git ~/.claude/skills/terraform-forge
 
-# Windows (PowerShell)
+**macOS / Linux**
+```bash
+git clone https://github.com/anirudhx7/terraform-forge.git ~/.claude/skills/terraform-forge
+```
+
+**Windows (PowerShell)**
+```powershell
 git clone https://github.com/anirudhx7/terraform-forge.git "$env:USERPROFILE\.claude\skills\terraform-forge"
 ```
 
 Claude Code auto-discovers skills — no restart needed.
-
 ---
 
 ## How It Works
