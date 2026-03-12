@@ -2,7 +2,7 @@
   "plugins": [
     {
       "name": "terraform-forge",
-      "description": "Terraform/OpenTofu skill for Claude Code. Diagnoses failure modes before writing code, loads only what's needed, and ships an output contract with every response.",
+      "description": "Terraform/OpenTofu skill for Claude Code. Diagnoses security failure modes before writing code: secret exposure, blast radius, compliance gaps, CI drift. Loads only what's needed, ships an output contract with every response.",
       "skills": ["SKILL.md"]
     }
   ]
