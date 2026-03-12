@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "terraform-forge",
+      "description": "Terraform/OpenTofu skill for Claude Code. Diagnoses failure modes before writing code, loads only what's needed, and ships an output contract with every response.",
+      "skills": ["SKILL.md"]
+    }
+  ]
+}
